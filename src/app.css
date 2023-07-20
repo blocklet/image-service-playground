@@ -1,30 +1,30 @@
 html,
 body {
-  padding: 0;
+  padding: 8px;
   margin: 0;
 }
-.app {
-  text-align: center;
+
+a {
+  text-decoration: none;
 }
 
-.app-logo {
-  height: 10vmin;
-  pointer-events: none;
-}
-
-.app-header {
-  min-height: 100vh;
+.images {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
 }
 
-pre {
-  font-size: 0.75em;
+h3 {
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
 
-.app-link {
-  color: #4f6af5;
+.image {
+  margin-bottom: 16px;
+  margin-right: 16px;
+  padding: 8px;
+}
+
+.image p {
+  margin: 0;
+  margin-bottom: 4px;
 }
