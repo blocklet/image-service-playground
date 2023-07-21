@@ -19,11 +19,11 @@ function Home() {
         {QUALITY.map((x) => (
           <div key={`quality-${x}`} className="image">
             <p>
-              <a href={`${image}/resize?w=300&q=${x}`} target="_blank">
+              <a href={`${image}?imageFilter=resize&w=300&q=${x}`} target="_blank">
                 width=300, quality={x}
               </a>
             </p>
-            <img src={`${image}/resize?w=300&q=${x}`} alt="" />
+            <img src={`${image}?imageFilter=resize&w=300&q=${x}`} alt="" />
           </div>
         ))}
       </div>
@@ -32,11 +32,11 @@ function Home() {
         {SHARPEN.map((x) => (
           <div key={`sharpen-${x}`} className="image">
             <p>
-              <a href={`${image}/resize?w=300&s=${x}`} target="_blank">
+              <a href={`${image}?imageFilter=resize&w=300&s=${x}`} target="_blank">
                 width=300, sharpen={x}
               </a>
             </p>
-            <img src={`${image}/resize?w=300&s=${x}`} alt="" />
+            <img src={`${image}?imageFilter=resize&w=300&s=${x}`} alt="" />
           </div>
         ))}
       </div>
@@ -45,11 +45,11 @@ function Home() {
         {SIZES.map((x) => (
           <div key={`resize-w-${x}`} className="image">
             <p>
-              <a href={`${image}/resize?w=${x}`} target="_blank">
+              <a href={`${image}?imageFilter=resize&w=${x}`} target="_blank">
                 width={x}
               </a>
             </p>
-            <img src={`${image}/resize?w=${x}`} alt="" />
+            <img src={`${image}?imageFilter=resize&w=${x}`} alt="" />
           </div>
         ))}
       </div>
@@ -58,11 +58,11 @@ function Home() {
         {SIZES.map((x) => (
           <div key={`resize-h-${x}`} className="image">
             <p>
-              <a href={`${image}/resize?h=${x}`} target="_blank">
+              <a href={`${image}?imageFilter=resize&h=${x}`} target="_blank">
                 height={x}
               </a>
             </p>
-            <img src={`${image}/resize?h=${x}`} alt="" />
+            <img src={`${image}?imageFilter=resize&h=${x}`} alt="" />
           </div>
         ))}
       </div>
@@ -72,11 +72,11 @@ function Home() {
           SIZES.map((y) => (
             <div key={`resize-b-${x}-${y}`} className="image">
               <p>
-                <a href={`${image}/resize?w=${x}&h=${y}`} target="_blank">
+                <a href={`${image}?imageFilter=resize&w=${x}&h=${y}`} target="_blank">
                   width={x}, height={y}
                 </a>
               </p>
-              <img src={`${image}/resize?w=${x}&h=${y}`} alt="" />
+              <img src={`${image}?imageFilter=resize&w=${x}&h=${y}`} alt="" />
             </div>
           ))
         )}
@@ -86,11 +86,11 @@ function Home() {
         {ROTATE.map((x) => (
           <div key={`resize-r-${x}`} className="image">
             <p>
-              <a href={`${image}/resize?w=200&r=${x}`} target="_blank">
+              <a href={`${image}?imageFilter=resize&w=200&r=${x}`} target="_blank">
                 width=200, rotate={x}
               </a>
             </p>
-            <img src={`${image}/resize?w=200&r=${x}`} alt="" />
+            <img src={`${image}?imageFilter=resize&w=200&r=${x}`} alt="" />
           </div>
         ))}
       </div>
@@ -99,11 +99,11 @@ function Home() {
         {SIZES.map((x) => (
           <div key={`crop-w-${x}`} className="image">
             <p>
-              <a href={`${image}/crop?w=${x}`} target="_blank">
+              <a href={`${image}?imageFilter=crop&w=${x}`} target="_blank">
                 width={x}
               </a>
             </p>
-            <img src={`${image}/crop?w=${x}`} alt="" />
+            <img src={`${image}?imageFilter=crop&w=${x}`} alt="" />
           </div>
         ))}
       </div>
@@ -112,11 +112,11 @@ function Home() {
         {QUALITY.map((x) => (
           <div key={`crop-h-${x}`} className="image">
             <p>
-              <a href={`${image}/crop?h=${x}`} target="_blank">
+              <a href={`${image}?imageFilter=crop&h=${x}`} target="_blank">
                 height={x}
               </a>
             </p>
-            <img src={`${image}/crop?h=${x}`} alt="" />
+            <img src={`${image}?imageFilter=crop&h=${x}`} alt="" />
           </div>
         ))}
       </div>
@@ -126,11 +126,11 @@ function Home() {
           SIZES.map((y) => (
             <div key={`crop-b-${x}-${y}`} className="image">
               <p>
-                <a href={`${image}/crop?w=${x}&h=${y}`} target="_blank">
+                <a href={`${image}?imageFilter=crop&w=${x}&h=${y}`} target="_blank">
                   width={x}, height={y}
                 </a>
               </p>
-              <img src={`${image}/crop?w=${x}&h=${y}`} alt="" />
+              <img src={`${image}?imageFilter=crop&w=${x}&h=${y}`} alt="" />
             </div>
           ))
         )}
