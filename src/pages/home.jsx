@@ -6,9 +6,10 @@ import { useSearchParams } from 'react-router-dom';
 const SIZES = [100, 200, 300, 400];
 const QUALITY = [20, 40, 60, 80, 100];
 const SHARPEN = [50, 100, 200, 500, 1000];
-const BLUR = [5, 10, 20, 50, 100];
+const BLUR = [2, 4, 6, 8, 16];
 const ROTATE = [90, 180, 270];
 const MODES = ['cover', 'contain', 'fill', 'inside', 'outside'];
+const FORMAT = ['png', 'jpeg', 'webp', 'avif', 'heif'];
 
 function Home() {
   const [params] = useSearchParams();
@@ -16,6 +17,19 @@ function Home() {
 
   return (
     <div>
+      <h3>Formats</h3>
+      <div className="images">
+        {FORMAT.map((x) => (
+          <div key={`format-${x}`} className="image">
+            <p>
+              <a href={`${image}?imageFilter=resize&w=300&f=${x}`} target="_blank">
+                width=300, format={x}
+              </a>
+            </p>
+            <img src={`${image}?imageFilter=resize&w=300&f=${x}`} alt="" />
+          </div>
+        ))}
+      </div>
       <h3>Resize + Quality</h3>
       <div className="images">
         {QUALITY.map((x) => (
