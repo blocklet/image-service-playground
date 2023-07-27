@@ -6,7 +6,9 @@ import { useSearchParams } from 'react-router-dom';
 const SIZES = [100, 200, 300, 400];
 const QUALITY = [20, 40, 60, 80, 100];
 const SHARPEN = [50, 100, 200, 500, 1000];
+const BLUR = [5, 10, 20, 50, 100];
 const ROTATE = [90, 180, 270];
+const MODES = ['cover', 'contain', 'fill', 'inside', 'outside'];
 
 function Home() {
   const [params] = useSearchParams();
@@ -81,6 +83,19 @@ function Home() {
           ))
         )}
       </div>
+      <h3>Resize Modes</h3>
+      <div className="images">
+        {MODES.map((x) => (
+          <div key={`resize-m-${x}`} className="image">
+            <p>
+              <a href={`${image}?imageFilter=resize&w=300&h=300&m=${x}`} target="_blank">
+                width=300, height=300, mode={x}
+              </a>
+            </p>
+            <img src={`${image}?imageFilter=resize&w=300&h=300&m=${x}`} alt="" />
+          </div>
+        ))}
+      </div>
       <h3>Resize + Rotate</h3>
       <div className="images">
         {ROTATE.map((x) => (
@@ -94,31 +109,40 @@ function Home() {
           </div>
         ))}
       </div>
-      <h3>Crop Width</h3>
+      <h3>Resize + Blur</h3>
       <div className="images">
-        {SIZES.map((x) => (
-          <div key={`crop-w-${x}`} className="image">
+        {BLUR.map((x) => (
+          <div key={`blur-${x}`} className="image">
             <p>
-              <a href={`${image}?imageFilter=crop&w=${x}`} target="_blank">
-                width={x}
+              <a href={`${image}?imageFilter=resize&w=300&b=${x}`} target="_blank">
+                width=300, blur={x}
               </a>
             </p>
-            <img src={`${image}?imageFilter=crop&w=${x}`} alt="" />
+            <img src={`${image}?imageFilter=resize&w=300&b=${x}`} alt="" />
           </div>
         ))}
       </div>
-      <h3>Crop Height</h3>
+      <h3>Resize + Grayscale</h3>
       <div className="images">
-        {QUALITY.map((x) => (
-          <div key={`crop-h-${x}`} className="image">
-            <p>
-              <a href={`${image}?imageFilter=crop&h=${x}`} target="_blank">
-                height={x}
-              </a>
-            </p>
-            <img src={`${image}?imageFilter=crop&h=${x}`} alt="" />
-          </div>
-        ))}
+        <div className="image">
+          <p>
+            <a href={`${image}?imageFilter=resize&w=300&g=1`} target="_blank">
+              width=300, grayscale=1
+            </a>
+          </p>
+          <img src={`${image}?imageFilter=resize&w=300&g=1`} alt="" />
+        </div>
+      </div>
+      <h3>Resize + Negative</h3>
+      <div className="images">
+        <div className="image">
+          <p>
+            <a href={`${image}?imageFilter=resize&w=300&n=1`} target="_blank">
+              width=300, negate=1
+            </a>
+          </p>
+          <img src={`${image}?imageFilter=resize&w=300&n=1`} alt="" />
+        </div>
       </div>
       <h3>Crop Both</h3>
       <div className="images">
