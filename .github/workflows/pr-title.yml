@@ -8,8 +8,6 @@ on:
       - edited
       - synchronize
     branches:
-      - main
-      - dev
       - master
 
 jobs:
