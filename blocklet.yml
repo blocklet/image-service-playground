@@ -1,4 +1,4 @@
-name: image-service-playground
+name: z2qZzMBF5MdQbGfFyUSZmLJH7DzF2Q5ZQXBiJ
 title: Image Service Playground
 description: A simple playground for image service in blocklet server
 keywords:
@@ -13,8 +13,8 @@ author:
 repository:
   type: git
   url: git+https://github.com/blocklet/create-blocklet.git
-specVersion: 1.1.1
-version: 0.1.0
+specVersion: 1.2.8
+version: 0.1.1
 logo: logo.png
 files:
   - dist
@@ -24,25 +24,28 @@ interfaces:
   - type: web
     name: publicUrl
     path: /
-    prefix: "*"
+    prefix: '*'
     port: BLOCKLET_PORT
     protocol: http
-community: ""
-documentation: ""
-homepage: ""
-license: ""
+community: ''
+documentation: ''
+homepage: ''
+license: ''
 payment:
   price: []
   share: []
 timeout:
   start: 60
 requirements:
-  server: ">=1.6.29"
-  os: "*"
-  cpu: "*"
+  server: '>=1.6.29'
+  os: '*'
+  cpu: '*'
 scripts:
   dev: npm run start
 environments: []
-capabilities: {}
+capabilities:
+  clusterMode: false
+  component: true
+  navigation: true
 screenshots: []
 components: []
