@@ -15,6 +15,10 @@ function Home() {
   const [params] = useSearchParams();
   const image = params.get('image');
 
+  if (!image) {
+    return <p>Please set `image` param in query string, and refresh this page</p>;
+  }
+
   return (
     <div>
       <h3>Formats</h3>

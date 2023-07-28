@@ -24,7 +24,7 @@ jobs:
         uses: c-hive/gha-yarn-cache@v2
 
       - name: Init
-        run: make github-action-init
+        run: yarn
 
       - name: Blocklet workflow
         uses: blocklet/action-workflow@v1.1
