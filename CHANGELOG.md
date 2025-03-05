@@ -1,3 +1,7 @@
+## 0.1.4 (2025-3-5)
+
+- chore: update deps
+
 ## 0.1.3 (2023-7-28)
 
 - chore: update readme
