@@ -47,6 +47,7 @@ capabilities:
   clusterMode: false
   component: true
   navigation: true
-screenshots: []
+screenshots:
+  - 787a0597b2d8707a9b4e400aca44f2f2.png
 components: []
 egress: true
